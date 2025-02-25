@@ -9,9 +9,7 @@ app.use(express.json())
 
 app.use('/crud',crudRouter)
 app.get('/',(req,res)=>{
-
     res.send('home page   E');
-
 })
 
 
@@ -20,5 +18,4 @@ app.get('/',(req,res)=>{
 app.listen(3039 ,()=>{
   conn()
     console.log("server started and connected with database succesfully")
-    
 })

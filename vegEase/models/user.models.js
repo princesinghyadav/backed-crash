@@ -14,4 +14,4 @@ const Testschema= new mongoose.Schema({
 const Blogmodel=  mongoose.model("veg",Testschema);
     
 
- module.export=Blogmodel;
+ module.exports=Blogmodel;
