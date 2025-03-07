@@ -2,7 +2,7 @@
 
 const Hapi = require('@hapi/hapi');
 const useroutes = require('./routes/user.routes')
-const productroutes=require('./routes/product.routes')
+const productroutesplugin=require('./routes/product.routes')
 const init = async () => {
 
     const server = Hapi.server({
@@ -11,7 +11,8 @@ const init = async () => {
     });
 
     server.route(useroutes);
-    server.route(productroutes);
+    // server.route(productroutes);
+await server.register(productroutesplugin)
 
     server.route({
         method: 'GET',
